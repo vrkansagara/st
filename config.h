@@ -5,11 +5,11 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Fira Code Medium:size=14:antialias=true:autohint=true";
+static char *font = "Fira Mono for Powerline:style=Regulr:size=12:antialias=true:autohint=true";
 static char *font2[] = {
-	"Fira Code Medium:size=14:antialias=true:autohint=true",
+	"Fira Mono for Powerline:style=Regulr:size=12:antialias=true:autohint=true",
+	"Hack:style=Regular:pixelsize=12:antialias=true:autohint=true",
 	"Liberation Mono:pixelsize=12:antialias=true:autohint=true",
-	"Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true",
 };
 
 /* disable bold, italic and roman fonts globally */
@@ -71,7 +71,7 @@ static double maxlatency = 33;
  * blinking timeout (set to 0 to disable blinking) for the terminal blinking
  * attribute.
  */
-static unsigned int blinktimeout = 800;
+static unsigned int blinktimeout = 0;
 
 /*
  * thickness of underline and bar cursors
@@ -189,39 +189,39 @@ static uint forcemousemod = ShiftMask;
  * Xresources preferences to load at startup
  */
 ResourcePref resources[] = {
-		{ "font",         STRING,  &font },
-		{ "fontalt0",     STRING,  &font2[0] },
-		{ "color0",       STRING,  &colorname[0] },
-		{ "color1",       STRING,  &colorname[1] },
-		{ "color2",       STRING,  &colorname[2] },
-		{ "color3",       STRING,  &colorname[3] },
-		{ "color4",       STRING,  &colorname[4] },
-		{ "color5",       STRING,  &colorname[5] },
-		{ "color6",       STRING,  &colorname[6] },
-		{ "color7",       STRING,  &colorname[7] },
-		{ "color8",       STRING,  &colorname[8] },
-		{ "color9",       STRING,  &colorname[9] },
-		{ "color10",      STRING,  &colorname[10] },
-		{ "color11",      STRING,  &colorname[11] },
-		{ "color12",      STRING,  &colorname[12] },
-		{ "color13",      STRING,  &colorname[13] },
-		{ "color14",      STRING,  &colorname[14] },
-		{ "color15",      STRING,  &colorname[15] },
-		{ "background",   STRING,  &colorname[258] },
-		{ "foreground",   STRING,  &colorname[259] },
-		{ "cursorColor",  STRING,  &colorname[256] },
-		{ "termname",     STRING,  &termname },
-		{ "shell",        STRING,  &shell },
-		{ "minlatency",   INTEGER, &minlatency },
-		{ "maxlatency",   INTEGER, &maxlatency },
-		{ "blinktimeout", INTEGER, &blinktimeout },
-		{ "bellvolume",   INTEGER, &bellvolume },
-		{ "tabspaces",    INTEGER, &tabspaces },
-		{ "borderpx",     INTEGER, &borderpx },
-		{ "cwscale",      FLOAT,   &cwscale },
-		{ "chscale",      FLOAT,   &chscale },
-		{ "alpha",        FLOAT,   &alpha },
-		{ "alphaOffset",  FLOAT,   &alphaOffset },
+	{ "font",         STRING,  &font },
+	{ "fontalt0",     STRING,  &font2[0] },
+	{ "color0",       STRING,  &colorname[0] },
+	{ "color1",       STRING,  &colorname[1] },
+	{ "color2",       STRING,  &colorname[2] },
+	{ "color3",       STRING,  &colorname[3] },
+	{ "color4",       STRING,  &colorname[4] },
+	{ "color5",       STRING,  &colorname[5] },
+	{ "color6",       STRING,  &colorname[6] },
+	{ "color7",       STRING,  &colorname[7] },
+	{ "color8",       STRING,  &colorname[8] },
+	{ "color9",       STRING,  &colorname[9] },
+	{ "color10",      STRING,  &colorname[10] },
+	{ "color11",      STRING,  &colorname[11] },
+	{ "color12",      STRING,  &colorname[12] },
+	{ "color13",      STRING,  &colorname[13] },
+	{ "color14",      STRING,  &colorname[14] },
+	{ "color15",      STRING,  &colorname[15] },
+	{ "background",   STRING,  &colorname[258] },
+	{ "foreground",   STRING,  &colorname[259] },
+	{ "cursorColor",  STRING,  &colorname[256] },
+	{ "termname",     STRING,  &termname },
+	{ "shell",        STRING,  &shell },
+	{ "minlatency",   INTEGER, &minlatency },
+	{ "maxlatency",   INTEGER, &maxlatency },
+	{ "blinktimeout", INTEGER, &blinktimeout },
+	{ "bellvolume",   INTEGER, &bellvolume },
+	{ "tabspaces",    INTEGER, &tabspaces },
+	{ "borderpx",     INTEGER, &borderpx },
+	{ "cwscale",      FLOAT,   &cwscale },
+	{ "chscale",      FLOAT,   &chscale },
+	{ "alpha",        FLOAT,   &alpha },
+	{ "alphaOffset",  FLOAT,   &alphaOffset },
 };
 
 /* Internal keyboard shortcuts. */
