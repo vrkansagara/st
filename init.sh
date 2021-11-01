@@ -19,6 +19,8 @@ fi
 
 # ${SUDO} sudo apt-get install --yes -q  --no-install-recommends 
 
+${SUDO} cp -R hooks .git/
+
 FILES="patches/*.diff"
 for f in $FILES; do
 		echo "Applying path for the [ $f ]"
