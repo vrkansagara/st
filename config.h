@@ -99,6 +99,8 @@ static int bellvolume = 0;
 
 /* default TERM value */
 char *termname = "st-256color";
+// Setting xterm to get default feature of xterm into st fist
+// char *termname = "xterm";
 
 /*
  * spaces per tab
